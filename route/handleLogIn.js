@@ -15,7 +15,7 @@ function handleLogIn(req, res) {
       } else {
         // req.session.userId = user._id;
         var passedVariable = req.query.valid;
-        return res.redirect('/home');
+        return res.send({ redirect: '/home'});
       }
     });
 }
